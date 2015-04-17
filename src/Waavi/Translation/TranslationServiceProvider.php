@@ -34,8 +34,6 @@ class TranslationServiceProvider extends LaravelTranslationServiceProvider {
 	 */
 	public function register()
 	{
-		$this->package('waavi/translation', 'waavi/translation', __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..');
-
 		$this->registerLoader();
 		$this->registerTranslationFileLoader();
 
@@ -69,7 +67,7 @@ class TranslationServiceProvider extends LaravelTranslationServiceProvider {
 			$languageProvider 	= new LanguageProvider($app['config']['waavi/translation::language.model']);
 			$langEntryProvider 	= new LanguageEntryProvider($app['config']['waavi/translation::language_entry.model']);
 
-			$mode = $app['config']['waavi/translation::mode'];
+			$mode = $app['config']['waavi.mode'];
 
 			if ($mode == 'auto' || empty($mode)){
 				$mode = ($app['config']['app.debug'] ? 'mixed' : 'database');
