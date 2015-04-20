@@ -1,7 +1,7 @@
 {
     "name": "Meeting/translation",
     "version":  "1.0.3.4",
-    "description": "A Translation package for Laravel 4 with database and cache support",
+    "description": "A Translation package for Laravel 5 with database and cache support. Based on Waavi/translation.",
     "license": "MIT",
     "authors": [
         {
